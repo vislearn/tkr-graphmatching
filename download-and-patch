@@ -1,0 +1,13 @@
+#!/bin/bash
+set -eu -o pipefail
+
+rm -rf GraphMatching-v1.02.src
+curl -OvL 'https://pub.ist.ac.at/~vnk/software/GraphMatching-v1.02.src.zip'
+unzip -o GraphMatching-v1.02.src.zip
+
+find GraphMatching-v1.02.src -type f -exec chmod a-x '{}' +
+
+for p in patches/*.ex; do
+	b=$(basename "$p" .ex)
+	ex "GraphMatching-v1.02.src/$b" <"$p"
+done
