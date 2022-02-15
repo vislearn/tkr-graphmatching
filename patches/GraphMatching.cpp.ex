@@ -17,7 +17,7 @@
 
 			first = false;
 		}
-		output_file << "], \"energy\": " << E << ", \"elapsed\": " << elapsed.count() << "}\n";
+		output_file << "], \"energy\": " << E << ", \"elapsed\": " << elapsed.count() << "}" << std::endl;
 .
 1188c
 double GraphMatching::ComputeEnergy(const int* solution_left)

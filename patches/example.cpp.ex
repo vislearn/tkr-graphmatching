@@ -15,7 +15,7 @@
 			output_file << solution[i];
 		}
 		output_file << "], \"energy\": " << m->ComputeEnergy(solution);
-		output_file << ", \"elapsed\": " << elapsed.count() << "}\n";
+		output_file << ", \"elapsed\": " << elapsed.count() << "}" << std::endl;
 		output_file.close();
 	}
 .
